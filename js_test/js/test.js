@@ -1,11 +1,11 @@
 describe('dowbleElem', () => {
   it('введенный елемент является массивом', () => {
-    assert.equal(Array.isArray(dowbleElem(array)), true)
+    assert(Array.isArray(dowbleElem(array)))
   })
 })
 
 describe('dowbleElem', () => {
-  it('Не все елементы массива являются числом', () => {
-    assert.equal(dowbleElem(array.every(elem => typeof elem === "number")), true)
+  it('Все елементы массива являются числом', () => {
+    assert.deepEqual(dowbleElem(array).every(elem => typeof elem === "number"), true)
   })
 })
